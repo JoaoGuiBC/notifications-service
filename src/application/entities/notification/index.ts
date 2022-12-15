@@ -9,7 +9,7 @@ export interface NotificationData {
   createdAt: Date;
 }
 
-export class Notificattion {
+export class Notification {
   private data: NotificationData;
 
   constructor(data: Replace<NotificationData, { createdAt?: Date }>) {
