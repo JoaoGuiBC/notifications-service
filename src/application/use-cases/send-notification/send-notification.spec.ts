@@ -13,6 +13,6 @@ describe('Send notification', () => {
     });
 
     expect(notificationsRepository.notifications).toHaveLength(1);
-    expect(notificationsRepository.notifications).toEqual(notification);
+    expect(notificationsRepository.notifications[0]).toEqual(notification);
   });
 });
