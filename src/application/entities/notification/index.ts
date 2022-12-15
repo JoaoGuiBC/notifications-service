@@ -8,6 +8,7 @@ export interface NotificationData {
   content: Content;
   category: string;
   readAt?: Date | null;
+  canceledAt?: Date | null;
   createdAt: Date;
 }
 
@@ -57,6 +58,14 @@ export class Notification {
 
   public get readAt(): Date | null | undefined {
     return this.data.readAt;
+  }
+
+  public cancel() {
+    this.data.canceledAt = new Date();
+  }
+
+  public get canceledAt(): Date | null | undefined {
+    return this.data.canceledAt;
   }
 
   public get createdAt(): Date {
